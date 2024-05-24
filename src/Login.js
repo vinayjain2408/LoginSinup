@@ -41,6 +41,7 @@ const Login = () => {
         message.error('No user registered');
       }
       setLoading(false);
+      form.resetFields()
     });
   };
 
