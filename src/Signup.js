@@ -100,9 +100,14 @@ function Signup() {
   
     const handleSubmit = (values) => {
       console.log('Form values:', values);
+      const formData = JSON.stringify(values);
+      
+      localStorage.setItem("formData", formData);
+    
       message.success('SignUp successful');
       form.resetFields();
     };
+    
   
     const handleReset = () => {
       form.resetFields();
