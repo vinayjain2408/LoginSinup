@@ -1,6 +1,26 @@
 import React, { useState } from 'react';
 import { Button, Form, Input, message } from 'antd';
 
+const formItemLayout = {
+    labelCol: {
+      xs: {
+        span: 24,
+      },
+      sm: {
+        span: 6,
+      },
+    },
+    wrapperCol: {
+      xs: {
+        span: 24,
+      },
+      sm: {
+        span: 14,
+      },
+    },
+  };
+
+  
 const Login = () => {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
@@ -31,7 +51,9 @@ const Login = () => {
   };
 
   return (
-    <Form form={form} onFinish={handleLogin}>
+    <>
+    <h3>Login Page</h3>
+    <Form form={form} {...formItemLayout} onFinish={handleLogin}>
       <Form.Item
         name="email"
         rules={[
@@ -60,6 +82,7 @@ const Login = () => {
         </Button>
       </Form.Item>
     </Form>
+    </>
   );
 };
 

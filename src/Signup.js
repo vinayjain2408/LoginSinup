@@ -113,6 +113,7 @@ function Signup() {
   
     return (
       <>
+      <h3>SignUp Page</h3>
         <Form
           form={form}
           {...formItemLayout}
@@ -158,7 +159,7 @@ function Signup() {
               },
             ]}
           >
-            <Input />
+            <Input maxLength={10} />
           </Form.Item>
   
           <Form.Item
